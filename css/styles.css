@@ -512,7 +512,7 @@ address {
 
 /* Modal window start*/
 
-.backdrop{
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -521,6 +521,14 @@ address {
   height: 100%;
 
   background-color: var(--modal-window-background-opacity);
+  opacity: 1;
+  transition: opacity 250ms var(--transition-cubic-bezier);
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -535,6 +543,24 @@ address {
   background: var(--white-color);
   box-shadow: var(--border-shadow);
   border-radius: 4px;
+}
+
+.modal-close-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-right: 8px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  background: var(--white-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Modal window end */
