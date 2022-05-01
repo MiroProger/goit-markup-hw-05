@@ -75,6 +75,8 @@ address {
 .footer-link:focus,
 .contacts-list-icon:hover,
 .contacts-list-icon:focus,
+.our-clients-link:hover,
+.our-clients-link:focus
 .active-link {
   color: var(--accent-color);
 }
@@ -224,7 +226,7 @@ address {
   content: "";
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   right: 0;
   
   border-radius: 2px;
@@ -241,6 +243,7 @@ address {
 
 .contacts-list-icon {
   margin-right: 10px;
+  fill: current;
 }
 
 .header .contacts-list-item:not(:last-child) {
@@ -415,23 +418,17 @@ address {
 }
 
 .our-clients-link {
-  border: 1px solid var(--icon-color);
+  border: 1px solid currentColor;
   border-radius: 4px;
   height: 92px;
+
+  color: var(--icon-color);
+  
+  transition: color var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .our-clients-icon {
-  fill: var(--icon-color);
-}
-
-.our-clients-link:hover,
-.our-clients-link:focus {
-  border-color: var(--accent-color);
-}
-
-.our-clients-link:hover .our-clients-icon,
-.our-clients-link:focus .our-clients-icon {
-  fill: var(--accent-color);
+  fill: currentColor
 }
 
 /* our clients end */
@@ -517,8 +514,7 @@ address {
   background-color: var(--modal-window-background-opacity);
   opacity: 1;
   transition: opacity var(--transition-duration) var(--transition-cubic-bezier), 
-  visibility var(--transition-duration) var(--transition-cubic-bezier),
-  transform 2000ms var(--transition-cubic-bezier);
+  visibility var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .modal {
